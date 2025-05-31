@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.records-ontology - OGC API Records Ontology
-Generated 2025-05-28T03:54:50.234698+00:00
+Generated 2025-05-31T03:51:31.326167+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl created
