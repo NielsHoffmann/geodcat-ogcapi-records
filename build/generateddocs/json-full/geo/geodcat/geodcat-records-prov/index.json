@@ -10,12 +10,12 @@
   "itemClass": "schema",
   "register": "ogc-incubator",
   "dependsOn": [
-    "ogc.model.cross-domain.prov",
     "ogc.ogc-utils.prov",
-    "ogc.geo.geodcat.geodcat-records"
+    "ogc.geo.geodcat.geodcat-records",
+    "ogc.model.cross-domain.prov"
   ],
   "version": "0.1",
-  "dateOfLastChange": "2025-06-10",
+  "dateOfLastChange": "2025-06-13",
   "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
   "sources": [
     {
@@ -35,11 +35,11 @@
     "STAC"
   ],
   "shaclRules": {
-    "ogc.model.cross-domain.prov": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ],
     "ogc.geo.geodcat.records-ontology": [
       "https://nielshoffmann.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
     ]
   },
   "schema": {
