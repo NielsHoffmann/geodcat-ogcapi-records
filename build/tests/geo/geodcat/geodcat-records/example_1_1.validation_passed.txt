@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.geodcat-records - GeoDCAT mapping for OGC API Records
-Generated 2025-06-16T04:04:26.786571+00:00
+Generated 2025-06-19T03:59:46.628094+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
