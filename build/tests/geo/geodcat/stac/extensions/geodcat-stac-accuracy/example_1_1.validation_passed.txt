@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.stac.extensions.geodcat-stac-accuracy - GeoDCAT profile of STAC Accuracy extension
-Generated 2025-07-01T04:10:55.892160+00:00
+Generated 2025-07-04T04:01:16.381886+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
