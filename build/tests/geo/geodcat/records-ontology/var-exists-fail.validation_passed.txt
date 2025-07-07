@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.records-ontology - OGC API Records Ontology
-Generated 2025-07-04T04:01:09.373633+00:00
+Generated 2025-07-07T04:06:25.291709+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
