@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.stac.geodcat-stac-collection - GeoDCAT mapping for STAC collection
-Generated 2025-07-19T04:04:24.085104+00:00
+Generated 2025-07-22T04:11:03.044481+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
