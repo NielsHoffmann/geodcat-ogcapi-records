@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.stac.projjson - PROJ-JSON schema
-Generated 2025-08-10T04:14:43.577731+00:00
+Generated 2025-08-13T04:01:50.901962+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
