@@ -9,11 +9,11 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-08-22",
+  "dateOfLastChange": "2025-08-25",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
-    "ogc.geo.geodcat.geodcat",
-    "ogc.geo.geodcat.dcat-ap"
+    "ogc.geo.geodcat.dcat-ap",
+    "ogc.geo.geodcat.geodcat"
   ],
   "sources": [
     {
@@ -34,8 +34,9 @@
     "DCAT",
     "profile"
   ],
-  "shaclRules": {
+  "shaclShapes": {
     "ogc.geo.geodcat.dcat-ap": [
+      "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
       "https://nielshoffmann.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl"
     ]
   },
