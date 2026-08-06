@@ -1,14 +1,23 @@
 Validation report for ogc.geo.geodcat.dcat-ap-3.0.0 - DCAT-AP 3.0.0 profile
-Generated 2026-08-06T10:03:14.402580+00:00
+Generated 2026-08-06T10:03:14.494345+00:00
 === Files ===
-Using ./examples/dataset-example.ttl from examples
-Output Turtle example_1_1.ttl created
+Using ./examples/dataset-fail.ttl from examples
+Output Turtle example_2_1.ttl created
 === End Files ===
 
 === SHACL ===
+
+** Validation error **
 Validation result for _sources/dcat-ap-3.0.0/rules.shacl:
   Validation Report
-  Conforms: True
+  Conforms: False
+  Results (1):
+  Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+  	Severity: shacl:Violation
+  	Source Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/3844f5a8620973800a0f9d6121572dbe0082c955>
+  	Focus Node: exampleMS:1T2p3o4B-dist-SHP
+  	Result Path: dc1:rights
+  	Message: More than 1 values on exampleMS:1T2p3o4B-dist-SHP->dc1:rights
   
 Focus nodes for _sources/dcat-ap-3.0.0/rules.shacl:
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>: exampleMS:1T2p3o4B/dct:publisher,exampleMS:1T2p3o4B/dct:creator
@@ -34,7 +43,7 @@ Focus nodes for _sources/dcat-ap-3.0.0/rules.shacl:
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>: *none*
- - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: <http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+ - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: <http://publications.europa.eu/resource/authority/access-right/PUBLIC>,<http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC>,<http://publications.europa.eu/resource/authority/access-right/SENSITIVE>
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>: *none*
@@ -54,9 +63,18 @@ Focus nodes for _sources/dcat-ap-3.0.0/rules.shacl:
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>: exampleMS:1T2p3o4B/dct:spatial,<https://www.geonames.org/2750405>
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>: *none*
 
+
+** Validation error **
 Validation result for https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl:
   Validation Report
-  Conforms: True
+  Conforms: False
+  Results (1):
+  Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+  	Severity: shacl:Violation
+  	Source Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/3844f5a8620973800a0f9d6121572dbe0082c955>
+  	Focus Node: exampleMS:1T2p3o4B-dist-SHP
+  	Result Path: dc1:rights
+  	Message: More than 1 values on exampleMS:1T2p3o4B-dist-SHP->dc1:rights
   
 Focus nodes for https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl:
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>: exampleMS:1T2p3o4B/dct:publisher,exampleMS:1T2p3o4B/dct:creator
@@ -82,7 +100,7 @@ Focus nodes for https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/mas
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>: *none*
- - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: <http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+ - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: <http://publications.europa.eu/resource/authority/access-right/PUBLIC>,<http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC>,<http://publications.europa.eu/resource/authority/access-right/SENSITIVE>
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>: *none*
