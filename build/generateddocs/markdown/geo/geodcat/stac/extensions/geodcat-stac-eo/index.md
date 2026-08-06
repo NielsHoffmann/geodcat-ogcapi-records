@@ -190,7 +190,7 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/context.jsonld",
+  "@context": "https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/context.jsonld",
   "id": "eo-collection",
   "type": "Collection",
   "stac_extensions": [
@@ -545,7 +545,7 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/context.jsonld",
+  "@context": "https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/context.jsonld",
   "stac_version": "1.1.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
@@ -717,15 +717,15 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
     dcterms:modified "2020-12-12T01:48:13.725Z" ;
     rdfs:seeAlso [ rdfs:label "Simple Example Collection" ;
             dcterms:type "application/json" ;
-            ns2:relation <http://www.iana.org/assignments/relation/collection> ;
-            oa:hasTarget <https://example.com/stac/raster/example-1/collection.json> ],
-        [ rdfs:label "Simple Example Collection" ;
-            dcterms:type "application/json" ;
             ns2:relation <http://www.iana.org/assignments/relation/parent> ;
             oa:hasTarget <https://example.com/stac/raster/example-1/collection.json> ],
         [ rdfs:label "Simple Example Collection" ;
             dcterms:type "application/json" ;
             ns2:relation <http://www.iana.org/assignments/relation/root> ;
+            oa:hasTarget <https://example.com/stac/raster/example-1/collection.json> ],
+        [ rdfs:label "Simple Example Collection" ;
+            dcterms:type "application/json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/collection> ;
             oa:hasTarget <https://example.com/stac/raster/example-1/collection.json> ] ;
     geojson:bbox ( 1.729117e+02 1.343885e+00 1.729547e+02 1.369048e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
@@ -733,7 +733,17 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
     stac:hasAsset [ ns1:analytic [ dcterms:format "image/tiff; application=geotiff; profile=cloud-optimized" ;
                     dcterms:title "4-Band Analytic" ;
                     oa:hasTarget <https://storage.googleapis.com/open-cogs/stac-examples/20201211_223832_CS2_analytic.tif> ;
-                    ns1:bands [ ns1:name "band4" ;
+                    ns1:bands [ ns1:name "band3" ;
+                            eo:center_wavelength 6.45e-01 ;
+                            eo:common_name "red" ;
+                            eo:full_width_half_max 9e-02 ;
+                            eo:solar_illumination 1.51206e+03 ],
+                        [ ns1:name "band2" ;
+                            eo:center_wavelength 5.6e-01 ;
+                            eo:common_name "green" ;
+                            eo:full_width_half_max 8e-02 ;
+                            eo:solar_illumination 1.82324e+03 ],
+                        [ ns1:name "band4" ;
                             eo:center_wavelength 8e-01 ;
                             eo:common_name "nir" ;
                             eo:full_width_half_max 1.52e-01 ;
@@ -742,17 +752,7 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
                             eo:center_wavelength 4.7e-01 ;
                             eo:common_name "blue" ;
                             eo:full_width_half_max 7e-02 ;
-                            eo:solar_illumination 1.95966e+03 ],
-                        [ ns1:name "band2" ;
-                            eo:center_wavelength 5.6e-01 ;
-                            eo:common_name "green" ;
-                            eo:full_width_half_max 8e-02 ;
-                            eo:solar_illumination 1.82324e+03 ],
-                        [ ns1:name "band3" ;
-                            eo:center_wavelength 6.45e-01 ;
-                            eo:common_name "red" ;
-                            eo:full_width_half_max 9e-02 ;
-                            eo:solar_illumination 1.51206e+03 ] ;
+                            eo:solar_illumination 1.95966e+03 ] ;
                     stac:roles "data" ;
                     eo:cloud_cover 1.2e+00 ] ;
             ns1:thumbnail [ dcterms:format "image/png" ;
@@ -762,18 +762,18 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
             ns1:visual [ dcterms:format "image/tiff; application=geotiff; profile=cloud-optimized" ;
                     dcterms:title "3-Band Visual" ;
                     oa:hasTarget <https://storage.googleapis.com/open-cogs/stac-examples/20201211_223832_CS2.tif> ;
-                    ns1:bands [ ns1:name "band3" ;
-                            eo:center_wavelength 6.45e-01 ;
-                            eo:common_name "red" ;
-                            eo:full_width_half_max 9e-02 ],
+                    ns1:bands [ ns1:name "band2" ;
+                            eo:center_wavelength 5.6e-01 ;
+                            eo:common_name "green" ;
+                            eo:full_width_half_max 8e-02 ],
                         [ ns1:name "band1" ;
                             eo:center_wavelength 4.7e-01 ;
                             eo:common_name "blue" ;
                             eo:full_width_half_max 7e-02 ],
-                        [ ns1:name "band2" ;
-                            eo:center_wavelength 5.6e-01 ;
-                            eo:common_name "green" ;
-                            eo:full_width_half_max 8e-02 ] ;
+                        [ ns1:name "band3" ;
+                            eo:center_wavelength 6.45e-01 ;
+                            eo:common_name "red" ;
+                            eo:full_width_half_max 9e-02 ] ;
                     stac:roles "visual" ] ] ;
     stac:hasExtension "https://stac-extensions.github.io/eo/v2.0.0/schema.json" ;
     stac:version "1.1.0" ;
@@ -792,15 +792,15 @@ description: Schema for OGCAPI records profile for GeoDCAT - defines all extra e
 allOf:
 - $ref: https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/eo/schema.yaml
 - anyOf:
-  - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-item/schema.yaml
-  - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-collection/schema.yaml
+  - $ref: https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-item/schema.yaml
+  - $ref: https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-collection/schema.yaml
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/schema.yaml)
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/schema.yaml)
 
 
 # JSON-LD Context
@@ -1030,7 +1030,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/context.jsonld)
+[context.jsonld](https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/extensions/geodcat-stac-eo/context.jsonld)
 
 ## Sources
 
@@ -1042,6 +1042,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/geodcat-ogcapi-records](https://github.com/ogcincubator/geodcat-ogcapi-records)
+* URL: [https://github.com/NielsHoffmann/geodcat-ogcapi-records](https://github.com/NielsHoffmann/geodcat-ogcapi-records)
 * Path: `_sources/stac/extensions/geodcat-stac-eo`
 

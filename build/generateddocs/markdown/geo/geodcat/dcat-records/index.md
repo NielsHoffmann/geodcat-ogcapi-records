@@ -252,7 +252,7 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/context.jsonld",
+  "@context": "https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/context.jsonld",
   "id": "urn:x-wmo:md:int.wmo.wis::https://geo.woudc.org/def/data/ozone/total-column-ozone/totalozone",
   "type": "Feature",
   "time": {
@@ -498,10 +498,12 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
     dcterms:modified "2021-02-08T00:00:00Z" ;
     dcterms:temporal [ ] ;
     dcterms:title "Total Ozone - daily observations" ;
-    rdfs:seeAlso [ rdfs:label "OGC Web Feature Service (WFS)" ;
-            dcterms:format "application/xml" ;
-            ns1:relation <http://www.iana.org/assignments/relation/service> ;
-            oa:hasTarget <https://geo.woudc.org/ows> ],
+    rdfs:seeAlso [ rdfs:label "Static dataset archive file" ;
+            dcterms:created "2015-01-23T00:00:00Z" ;
+            dcterms:format "application/zip" ;
+            dcterms:modified "2015-01-23T00:00:00Z" ;
+            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
+            oa:hasTarget <https://woudc.org/archive/Summaries/dataset-snapshots/totalozone.zip> ],
         [ rdfs:label "Total Ozone Preview Image" ;
             dcterms:format "image/png" ;
             ns1:relation <http://www.iana.org/assignments/relation/preview> ;
@@ -512,6 +514,8 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
             dcterms:modified "2015-01-23T00:00:00Z" ;
             ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
             oa:hasTarget <https://woudc.org/archive/Archive-NewFormat/TotalOzone_1.0_1> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/license> ;
+            oa:hasTarget <https://woudc.org/about/data-policy.php> ],
         [ rdfs:label "This document as HTML" ;
             dcterms:format "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
@@ -520,14 +524,10 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
             dcterms:format "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/search> ;
             oa:hasTarget <https://woudc.org/data/explore.php?dataset=totalozone> ],
-        [ rdfs:label "Static dataset archive file" ;
-            dcterms:created "2015-01-23T00:00:00Z" ;
-            dcterms:format "application/zip" ;
-            dcterms:modified "2015-01-23T00:00:00Z" ;
-            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
-            oa:hasTarget <https://woudc.org/archive/Summaries/dataset-snapshots/totalozone.zip> ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/license> ;
-            oa:hasTarget <https://woudc.org/about/data-policy.php> ] ;
+        [ rdfs:label "OGC Web Feature Service (WFS)" ;
+            dcterms:format "application/xml" ;
+            ns1:relation <http://www.iana.org/assignments/relation/service> ;
+            oa:hasTarget <https://geo.woudc.org/ows> ] ;
     dcat:contactPoint [ rdfs:seeAlso [ dcterms:format "text/html" ;
                     ns1:relation <http://www.iana.org/assignments/relation/about> ;
                     oa:hasTarget <https://woudc.org> ] ] ;
@@ -541,20 +541,20 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
     dcat:license "other" ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( -180 -90 ) ( -180 90 ) ( 180 90 ) ( 180 -90 ) ( -180 -90 ) ) ) ] ;
-    rec:format [ rec:name "GeoJSON" ],
-        [ rec:name "CSV" ] ;
+    rec:format [ rec:name "CSV" ],
+        [ rec:name "GeoJSON" ] ;
     rec:hasLinkTemplate [ rdfs:label "World Ozone and Ultraviolet Radiation Data Centre (WOUDC) stations" ;
             dcterms:format "image/png" ;
             ns1:relation <http://www.iana.org/assignments/relation/describes> ;
             rec:hasVariable [ dcterms:description "..." ;
+                    dcterms:format "array" ;
+                    dcterms:identifier "bbox" ],
+                [ dcterms:description "..." ;
                     dcterms:format "string" ;
                     dcterms:identifier "crs" ],
                 [ dcterms:description "..." ;
                     dcterms:format "number" ;
                     dcterms:identifier "width" ],
-                [ dcterms:description "..." ;
-                    dcterms:format "array" ;
-                    dcterms:identifier "bbox" ],
                 [ dcterms:description "..." ;
                     dcterms:format "number" ;
                     dcterms:identifier "height" ] ;
@@ -570,10 +570,10 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
     rec:themes [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_dobson> ;
             thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ],
-        [ thns:concepts [ thns:id "pollution"^^xsd:string ],
-                [ thns:id "rocketSounding"^^xsd:string ],
-                [ thns:id "atmosphericComposition"^^xsd:string ],
-                [ thns:id "observationPlatform"^^xsd:string ] ;
+        [ thns:concepts [ thns:id "rocketSounding"^^xsd:string ],
+                [ thns:id "pollution"^^xsd:string ],
+                [ thns:id "observationPlatform"^^xsd:string ],
+                [ thns:id "atmosphericComposition"^^xsd:string ] ;
             thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ] .
 
 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer> thns:id "brewer"^^xsd:string .
@@ -691,8 +691,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.yaml)
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.yaml)
 
 
 # JSON-LD Context
@@ -894,7 +894,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/context.jsonld)
+[context.jsonld](https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/context.jsonld)
 
 ## Sources
 
@@ -905,6 +905,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/geodcat-ogcapi-records](https://github.com/ogcincubator/geodcat-ogcapi-records)
+* URL: [https://github.com/NielsHoffmann/geodcat-ogcapi-records](https://github.com/NielsHoffmann/geodcat-ogcapi-records)
 * Path: `_sources/dcat-records`
 
