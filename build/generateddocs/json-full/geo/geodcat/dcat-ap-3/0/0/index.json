@@ -26,8 +26,8 @@
   ],
   "shaclShapes": {
     "ogc.geo.geodcat.dcat-ap-3.0.0": [
-      "https://nielshoffmann.github.io/geodcat-ogcapi-records/_sources/dcat-ap-3.0.0/rules.shacl",
-      "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl"
+      "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl",
+      "https://nielshoffmann.github.io/geodcat-ogcapi-records/_sources/dcat-ap-3.0.0/rules.shacl"
     ]
   },
   "scope": "dev",
