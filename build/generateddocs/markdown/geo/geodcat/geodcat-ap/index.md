@@ -17,6 +17,9 @@ This building block provides a framework to test compatibility of Semic's GeoDCA
 
 ### GeoDCAT-AP example
 This example from GeoDCAT-AP
+
+N.B. We know the validation currently fails because the referenced GeoDCAT-AP Shacl file redefines some properties
+from the upstream DCAT-AP Shacl file, so it cannot be used in the building blocks the way we would like.
 #### ttl
 ```ttl
 @prefix adms: <http://www.w3.org/ns/adms#> .

@@ -9,11 +9,11 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.2",
-  "dateOfLastChange": "2023-09-18",
+  "dateOfLastChange": "2026-08-07",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
-    "ogc.geo.geodcat.geodcat",
-    "ogc.geo.geodcat.dcat-ap-3.0.1"
+    "ogc.geo.geodcat.dcat-ap-3.0.1",
+    "ogc.geo.geodcat.geodcat"
   ],
   "sources": [
     {
@@ -50,7 +50,7 @@
   "examples": [
     {
       "title": "GeoDCAT-AP example",
-      "content": "This example from GeoDCAT-AP",
+      "content": "This example from GeoDCAT-AP\n\nN.B. We know the validation currently fails because the referenced GeoDCAT-AP Shacl file redefines some properties\nfrom the upstream DCAT-AP Shacl file, so it cannot be used in the building blocks the way we would like.",
       "snippets": [
         {
           "language": "ttl",
