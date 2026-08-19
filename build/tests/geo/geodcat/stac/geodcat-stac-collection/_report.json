@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.geo.geodcat.stac.geodcat-stac-collection - GeoDCAT mapping for STAC collection",
   "bblockName": "GeoDCAT mapping for STAC collection",
   "bblockId": "ogc.geo.geodcat.stac.geodcat-stac-collection",
-  "generated": "2026-08-16T04:07:05.004262+00:00",
+  "generated": "2026-08-19T04:06:41.314272+00:00",
   "result": true,
   "items": [
     {
@@ -73,13 +73,13 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-stac/_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "stac:AssetShape": {
+                "stac:CollectionShape": {
                   "nodes": []
                 },
                 "stac:ItemShape": {
                   "nodes": []
                 },
-                "stac:CollectionShape": {
+                "stac:AssetShape": {
                   "nodes": []
                 },
                 "stac:LinkShape": {
@@ -87,7 +87,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-stac/_sources/core-ontology/shapes.shacl:\n - Shape stac:AssetShape: *none*\n - Shape stac:ItemShape: *none*\n - Shape stac:CollectionShape: *none*\n - Shape stac:LinkShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-stac/_sources/core-ontology/shapes.shacl:\n - Shape stac:CollectionShape: *none*\n - Shape stac:ItemShape: *none*\n - Shape stac:AssetShape: *none*\n - Shape stac:LinkShape: *none*\n"
             }
           ]
         }
