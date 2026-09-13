@@ -500,10 +500,6 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
     dcterms:title "Total Ozone - daily observations" ;
     rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/license> ;
             oa:hasTarget <https://woudc.org/about/data-policy.php> ],
-        [ rdfs:label "Total Ozone Preview Image" ;
-            dcterms:format "image/png" ;
-            ns1:relation <http://www.iana.org/assignments/relation/preview> ;
-            oa:hasTarget <https://woudc.org/data/preview.png> ],
         [ rdfs:label "Web Accessible Folder (WAF)" ;
             dcterms:created "2015-01-23T00:00:00Z" ;
             dcterms:format "text/html" ;
@@ -514,6 +510,10 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
             dcterms:format "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/search> ;
             oa:hasTarget <https://woudc.org/data/explore.php?dataset=totalozone> ],
+        [ rdfs:label "Total Ozone Preview Image" ;
+            dcterms:format "image/png" ;
+            ns1:relation <http://www.iana.org/assignments/relation/preview> ;
+            oa:hasTarget <https://woudc.org/data/preview.png> ],
         [ rdfs:label "This document as HTML" ;
             dcterms:format "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
@@ -561,19 +561,19 @@ This snippet was retrieved from [https://raw.githubusercontent.com/opengeospatia
             rec:uriTemplate "https://geo.woudc.org/ows?service=WMS&version=1.3.0&request=GetMap&crs={crs}&bbox={bbox}&layers=stations&width={width}&height={height}&format=image/png"^^xsd:string ] ;
     rec:language [ skos:prefLabel "English (Canada)" ;
             rec:languageCode "en-CA" ] ;
-    rec:languages [ skos:prefLabel "French (Canada)" ;
-            rec:languageCode "fr-CA" ],
-        [ skos:prefLabel "English (Canada)" ;
-            rec:languageCode "en-CA" ] ;
+    rec:languages [ skos:prefLabel "English (Canada)" ;
+            rec:languageCode "en-CA" ],
+        [ skos:prefLabel "French (Canada)" ;
+            rec:languageCode "fr-CA" ] ;
     rec:scopedIdentifier [ rec:id "urn:x-wmo:md:int.wmo.wis::https://geo.woudc.org/def/data/ozone/total-column-ozone/totalozone" ;
             rec:scheme "WMO:WIS" ] ;
     rec:themes [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_dobson> ;
             thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ],
-        [ thns:concepts [ thns:id "observationPlatform"^^xsd:string ],
-                [ thns:id "atmosphericComposition"^^xsd:string ],
-                [ thns:id "pollution"^^xsd:string ],
-                [ thns:id "rocketSounding"^^xsd:string ] ;
+        [ thns:concepts [ thns:id "pollution"^^xsd:string ],
+                [ thns:id "rocketSounding"^^xsd:string ],
+                [ thns:id "observationPlatform"^^xsd:string ],
+                [ thns:id "atmosphericComposition"^^xsd:string ] ;
             thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ] .
 
 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer> thns:id "brewer"^^xsd:string .
