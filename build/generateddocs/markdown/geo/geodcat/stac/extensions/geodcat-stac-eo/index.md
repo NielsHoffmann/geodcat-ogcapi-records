@@ -717,11 +717,11 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
     dcterms:modified "2020-12-12T01:48:13.725Z" ;
     rdfs:seeAlso [ rdfs:label "Simple Example Collection" ;
             dcterms:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
+            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
             oa:hasTarget <https://example.com/stac/raster/example-1/collection.json> ],
         [ rdfs:label "Simple Example Collection" ;
             dcterms:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
+            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
             oa:hasTarget <https://example.com/stac/raster/example-1/collection.json> ],
         [ rdfs:label "Simple Example Collection" ;
             dcterms:type "application/json" ;
@@ -760,11 +760,11 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
 
 <https://storage.googleapis.com/open-cogs/stac-examples/20201211_223832_CS2_analytic.tif> dcterms:format "image/tiff; application=geotiff; profile=cloud-optimized" ;
     dcterms:title "4-Band Analytic" ;
-    ns2:bands [ ns2:name "band3" ;
-            eo:center_wavelength 6.45e-01 ;
-            eo:common_name eo:red ;
-            eo:full_width_half_max 9e-02 ;
-            eo:solar_illumination 1.51206e+03 ],
+    ns2:bands [ ns2:name "band4" ;
+            eo:center_wavelength 8e-01 ;
+            eo:common_name eo:nir ;
+            eo:full_width_half_max 1.52e-01 ;
+            eo:solar_illumination 1.04163e+03 ],
         [ ns2:name "band2" ;
             eo:center_wavelength 5.6e-01 ;
             eo:common_name eo:green ;
@@ -775,11 +775,11 @@ This building block shows a possible profile of GeoDCAT supporting semantic anno
             eo:common_name eo:blue ;
             eo:full_width_half_max 7e-02 ;
             eo:solar_illumination 1.95966e+03 ],
-        [ ns2:name "band4" ;
-            eo:center_wavelength 8e-01 ;
-            eo:common_name eo:nir ;
-            eo:full_width_half_max 1.52e-01 ;
-            eo:solar_illumination 1.04163e+03 ] ;
+        [ ns2:name "band3" ;
+            eo:center_wavelength 6.45e-01 ;
+            eo:common_name eo:red ;
+            eo:full_width_half_max 9e-02 ;
+            eo:solar_illumination 1.51206e+03 ] ;
     stac:hasAssetroles "data"^^xsd:string ;
     eo:cloud_cover 1.2e+00 .
 
