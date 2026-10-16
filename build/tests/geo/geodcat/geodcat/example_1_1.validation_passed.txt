@@ -1,5 +1,5 @@
 Validation report for ogc.geo.geodcat.geodcat - GeoDCAT profile
-Generated 2026-10-13T10:52:37.819937+00:00
+Generated 2026-10-16T08:22:45.417458+00:00
 === Files ===
 Using examples/place-expressions.ttl from examples
 === End Files ===
