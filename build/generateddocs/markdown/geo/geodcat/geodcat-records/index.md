@@ -513,6 +513,10 @@ This was then modified according to suggested guidance in [records issue #21](ht
             dcterms:format "application/xml" ;
             ns1:relation <http://www.iana.org/assignments/relation/service> ;
             oa:hasTarget <https://geo.woudc.org/ows> ],
+        [ rdfs:label "This document as HTML" ;
+            dcterms:format "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
+            oa:hasTarget <https://woudc.org/data/dataset_info.php?id=totalozone> ],
         [ ns1:relation <http://www.iana.org/assignments/relation/license> ;
             oa:hasTarget <https://woudc.org/about/data-policy.php> ],
         [ rdfs:label "Web Accessible Folder (WAF)" ;
@@ -521,10 +525,6 @@ This was then modified according to suggested guidance in [records issue #21](ht
             dcterms:modified "2015-01-23T00:00:00Z" ;
             ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
             oa:hasTarget <https://woudc.org/archive/Archive-NewFormat/TotalOzone_1.0_1> ],
-        [ rdfs:label "This document as HTML" ;
-            dcterms:format "text/html" ;
-            ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
-            oa:hasTarget <https://woudc.org/data/dataset_info.php?id=totalozone> ],
         [ rdfs:label "Data Search / Download User Interface" ;
             dcterms:format "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/search> ;
@@ -542,17 +542,17 @@ This was then modified according to suggested guidance in [records issue #21](ht
     dcat:license "other" ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( -180 -90 ) ( -180 90 ) ( 180 90 ) ( 180 -90 ) ( -180 -90 ) ) ) ] ;
-    rec:format [ rec:name "GeoJSON" ],
-        [ rec:name "CSV" ] ;
+    rec:format [ rec:name "CSV" ],
+        [ rec:name "GeoJSON" ] ;
     rec:hasLinkTemplate [ rdfs:label "World Ozone and Ultraviolet Radiation Data Centre (WOUDC) stations" ;
             dcterms:format "image/png" ;
             ns1:relation <http://www.iana.org/assignments/relation/describes> ;
             rec:hasVariable [ dcterms:description "..." ;
-                    dcterms:format "string" ;
-                    dcterms:identifier "crs" ],
-                [ dcterms:description "..." ;
                     dcterms:format "array" ;
                     dcterms:identifier "bbox" ],
+                [ dcterms:description "..." ;
+                    dcterms:format "string" ;
+                    dcterms:identifier "crs" ],
                 [ dcterms:description "..." ;
                     dcterms:format "number" ;
                     dcterms:identifier "height" ],
@@ -568,9 +568,9 @@ This was then modified according to suggested guidance in [records issue #21](ht
             rec:languageCode "en-CA" ] ;
     rec:scopedIdentifier [ rec:id "urn:x-wmo:md:int.wmo.wis::https://geo.woudc.org/def/data/ozone/total-column-ozone/totalozone" ;
             rec:scheme "WMO:WIS" ] ;
-    rec:themes [ thns:concepts [ thns:id "atmosphericComposition"^^xsd:string ],
-                [ thns:id "observationPlatform"^^xsd:string ],
+    rec:themes [ thns:concepts [ thns:id "observationPlatform"^^xsd:string ],
                 [ thns:id "rocketSounding"^^xsd:string ],
+                [ thns:id "atmosphericComposition"^^xsd:string ],
                 [ thns:id "pollution"^^xsd:string ] ;
             thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ],
         [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
@@ -597,7 +597,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.geo.geodcat.geodcat-records
   register: https://nielshoffmann.github.io/geodcat-ogcapi-records/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-22'
+  dateOfLastChange: '2026-10-25'
 
 ```
 
