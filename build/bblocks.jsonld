@@ -168,10 +168,6 @@
         "@id": "prof:hasResource",
         "@type": "@id"
       },
-      "rdfData": {
-        "@id": "prof:hasResource",
-        "@type": "@id"
-      },
       "links": {
         "@id": "prof:hasResource",
         "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld"
@@ -200,6 +196,9 @@
           "validation": "role:validation",
           "vocabulary": "role:vocabulary",
           "data": "role:data",
+          "requirements": "role:requirements",
+          "terms": "role:terms",
+          "references": "role:references",
           "ref": {
             "@id": "prof:hasArtifact",
             "@type": "@id"
@@ -217,12 +216,12 @@
   "name": "Building Blocks - GeoDCAT implementation using OGC API Records",
   "abstract": "[OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/) linking GeoDCAT to OGC API Records and other schemas. Uses examples to support a development methodology for DCAT: separation of DCAT and other existing ontology from requirements identified from a range of alternative spatiotemporal metadata schemas.\n",
   "description": "This is intended to explore and support regression testing during the development of GeoDCAT by testing that the concepts used in OGC API Records (and extensions such as STAC) can be mapped to either DCAT or added to GeoDCAT as required.\n\nFor more information see the [GeoDCAT model development methdology](https://github.com/opengeospatial/GeoDCAT-SWG/blob/main/METHODOLOGY.md)\n",
-  "modified": "2026-11-22T11:46:15.022955",
+  "modified": "2026-11-25T13:17:05.332233",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"990affbe72a10408bfed51a6254103fad13752c2",
-      "shortCommitId": "\"990aff",
-      "date": "2026-11-19T17:39:46+00:00\""
+      "commitId": "\"009466f93d27bf23cb4832f43883f4f524ab5d30",
+      "shortCommitId": "\"009466",
+      "date": "2026-11-24T22:38:04+00:00\""
     }
   },
   "gitRepository": "https://github.com/NielsHoffmann/geodcat-ogcapi-records",
@@ -274,7 +273,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "2.0",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [],
       "scope": "dev",
@@ -317,7 +316,6 @@
       "ldContext": null,
       "schema": null,
       "openAPIDocument": null,
-      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "isDescribedBy": null,
@@ -334,7 +332,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": null,
       "sources": [
@@ -398,7 +396,6 @@
       "skos:prefLabel": "PROJ-JSON schema",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -414,7 +411,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "version": "3.0",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat2"
       ],
@@ -460,7 +457,6 @@
       "ldContext": null,
       "schema": null,
       "openAPIDocument": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -476,7 +472,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.3",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat"
@@ -537,7 +533,6 @@
       "schema": null,
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -553,7 +548,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat"
@@ -614,7 +609,6 @@
       "schema": null,
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -630,7 +624,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat"
@@ -691,7 +685,6 @@
       "schema": null,
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -707,7 +700,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat"
@@ -761,7 +754,6 @@
       "schema": null,
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -777,7 +769,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.api.records.records-ontology",
@@ -870,7 +862,6 @@
       "skos:prefLabel": "DCAT/Records binding",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -886,7 +877,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.2",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat-ap-3.0.1",
@@ -961,7 +952,6 @@
       "schema": null,
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -982,7 +972,7 @@
         "bblocks://ogc.geo.geodcat.geodcat"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -1141,7 +1131,6 @@
       "skos:prefLabel": "GeoDCAT mapping for OGC API Records",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -1158,7 +1147,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [
         {
@@ -1233,7 +1222,7 @@
       },
       "resolvedSchemaProperties": "https://nielshoffmann.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/geodcat-records-prov/resolvedProperties.json",
       "sourceFiles": "https://nielshoffmann.github.io/geodcat-ogcapi-records/_sources/geodcat-records-prov/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/NielsHoffmann/geodcat-ogcapi-records/blob/master/build/tests/geo/geodcat/geodcat-records-prov/",
       "documentation": {
         "markdown": {
@@ -1259,7 +1248,6 @@
       "skos:prefLabel": "GeoDCAT + PROV profile",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -1281,7 +1269,7 @@
         "bblocks://ogc.geo.geodcat.geodcat"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [
         {
@@ -1387,7 +1375,6 @@
       "skos:prefLabel": "GeoDCAT mapping for STAC collection",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -1410,7 +1397,7 @@
         "bblocks://ogc.geo.geodcat.geodcat-records"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [
         {
@@ -1534,7 +1521,6 @@
       "skos:prefLabel": "GeoDCAT mapping to STAC item",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -1556,7 +1542,7 @@
         "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [
         {
@@ -1686,7 +1672,6 @@
       "skos:prefLabel": "GeoDCAT profile of STAC Accuracy extension",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
@@ -1708,7 +1693,7 @@
         "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2026-11-19",
+      "dateOfLastChange": "2026-11-22",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [
         {
@@ -1838,7 +1823,6 @@
       "skos:prefLabel": "GeoDCAT profile of STAC Electro-Optical extension",
       "openAPIDocument": null,
       "ontology": null,
-      "rdfData": [],
       "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
